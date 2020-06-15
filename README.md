@@ -29,14 +29,21 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain how to build stateful class components.
+    A stateful component depends on its state and has sthe ability to change it. The component will also rerender when the state changes passing down the state to any of its child components.
 
 2. Describe the different phases of the component lifecycle.
+    The two main phases are the render phase and the commit phase. Rendering is done when the app is loaded and can be paused or restarted by react. The commit phase works with the DOM and and monitors the state of the app.
+    The three main phases are mounting, updating, and unmounting. The mounting phase is for calling the constructors and setting the initial state when the App launches. The updating phase watches for changes in state and updates the page as necessary. The mounting phase is for clean up and state updating when the component is no longer necessary.
 
 3. Demonstrate an understanding of class component lifecycle methods.
+    In the mounting phase the constructor is called, then render and react updates. componentDidMount is also called in the mounting phase of the lifecycle. In the updating phase state is monitored and componentDidUpdate will be invoked anytime state is updated. The ummounting phase is used to call componentDidUnmount.
 
 4. Define stateful logic.
+    Stateful logic is any code that uses state.
 
 5. Describe how to test a React component with React Testing Library.
+    Using the react testing library, testing is done by confirming the html components rendered by the application are rendered properly and mock data is created to verify the information is passed in forms properly.
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -54,22 +61,22 @@ _Please follow the setup instructions closely so that you can get everything up 
 
 **Basic set up**
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [*] Create a forked copy of this project
+- [*] Add your team lead as collaborator on Github
+- [*] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [*] Create a new branch: git checkout -b `<firstName-lastName>`.
 
 **Starting the server**
 
-- [ ] Run `npm install` to download dependencies for the server.
-- [ ] Run the server using `npm start`.
-- [ ] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
+- [*] Run `npm install` to download dependencies for the server.
+- [*] Run the server using `npm start`.
+- [*] Open a new browser tab and navigate to `http://localhost:3333/plants` - if you see a JSON object with plants data, then you know the server is running 👍
 
 **Starting the React app**
 
-- [ ] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
-- [ ] Still inside the `client` folder run `npm run start` to run the client application.
-- [ ] Your browser should open up the project as normal
+- [*] In a separate terminal cd into the `client` folder and run `npm install` to download dependencies.
+- [*] Still inside the `client` folder run `npm run start` to run the client application.
+- [*] Your browser should open up the project as normal
 
 **Starting your test runner**
 
@@ -89,9 +96,9 @@ Your finished project must include all of the following requirements:
 
 Display a list of the plants from the server. This should be done in the class component `PlantList`.
 
-- [ ] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
-- [ ] Set the data to a state property called `this.state.plants`
-- [ ] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart
+- [*] In the `PlantList` class component, fetch data from the server you now have running - the data can be fetched from `http://localhost:3333/plants`
+- [*] Set the data to a state property called `this.state.plants`
+- [*] The render function is already built and styled. Once the data is on the state, you will see the list of plants, and you will have the functionality to add a plant to the cart
 
 #### Shopping Cart
 
